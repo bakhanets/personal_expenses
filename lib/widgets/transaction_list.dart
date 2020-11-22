@@ -2,23 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:personal_expenses/models/transaction.dart';
 import 'package:intl/intl.dart';
 
-
-
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
 
   TransactionList(this.transactions);
 
-
   @override
   Widget build(BuildContext context) {
-    return  Column (
+    return Column(
       children: transactions.map((tx) {
         return Container(
           child: Card(
             shape: new RoundedRectangleBorder(
-              side: new BorderSide(
-                  color: Colors.purpleAccent, width: 2.0),
+              side: new BorderSide(color: Colors.purpleAccent, width: 2.0),
               borderRadius: BorderRadius.circular(7.0),
             ),
             child: Row(
